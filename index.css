@@ -19,3 +19,7 @@ a {
     margin-top: 150px;
     justify-content: space-around;
 }
+
+#carouselName{
+    color: rgb(55, 179, 236);
+}
