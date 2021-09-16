@@ -25,4 +25,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }
         carouselName.innerHTML = nameArray[position]
     })
+
+    const toggleDark = () => {
+        document.body.style.backgroundColor="#000000"
+        document.body.style.color="#FFFFFF"
+    }
 });
