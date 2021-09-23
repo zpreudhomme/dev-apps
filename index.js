@@ -5,16 +5,16 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let right = document.getElementById("right-arrow")
     let carouselName = document.getElementById("carouselName")
 
-    const nameArray= ["app", "blog", "shop", "note", "game", "graveyard"];
+    const nameArray= ["app", "blog", "shop", "note", "game", "art", "grave"];
     let position = 0;
 
     left.addEventListener('click', () => {
         if (position === 0){
-            position = 5;
+            position = 6;
         } else {
             position--;
         }
-        if (position === 5){
+        if (position === 6){
             toggleDark();
         }
         else {
@@ -24,12 +24,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
     })
 
     right.addEventListener('click', () => {
-        if (position === 5){
+        if (position === 6){
             position = 0;
         } else {
             position++;
         }
-        if (position === 5){
+        if (position === 6){
             toggleDark();
         }
         else {
