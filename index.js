@@ -14,6 +14,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
         } else {
             position--;
         }
+        if (position === 5){
+            toggleDark();
+        }
+        else {
+            toggleLight();
+        }
         carouselName.innerHTML = nameArray[position]
     })
 
@@ -23,11 +29,41 @@ window.addEventListener('DOMContentLoaded', (event) => {
         } else {
             position++;
         }
+        if (position === 5){
+            toggleDark();
+        }
+        else {
+            toggleLight();
+        }
         carouselName.innerHTML = nameArray[position]
     })
 
     const toggleDark = () => {
         document.body.style.backgroundColor="#000000"
         document.body.style.color="#FFFFFF"
+        let links = document.getElementsByTagName('a')
+        let arrows = document.getElementsByTagName('button')
+        for (let i = 0; i < links.length; i++){
+            let el = links[i]
+            el.classList.add('dark_mode')
+        }
+        for (let i = 0; i < arrows.length; i++){
+            let el = arrows[i]
+            el.classList.add('dark_mode')
+        }
+    }
+    const toggleLight = () => {
+        document.body.style.backgroundColor="#FFFFFF"
+        document.body.style.color="#000000"
+        let links = document.getElementsByTagName('a')
+        let arrows = document.getElementsByTagName('button')
+        for (let i = 0; i < links.length; i++){
+            let el = links[i]
+            el.classList.remove('dark_mode')
+        }
+        for (let i = 0; i < arrows.length; i++){
+            let el = arrows[i]
+            el.classList.remove('dark_mode')
+        }
     }
 });
